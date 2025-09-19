@@ -1,4 +1,4 @@
-# Terraform Text-to-Speech App
+# Asconababy-Text-To-Speech-Application
 
 ![IaC](https://img.shields.io/badge/IaC-Terraform-7B42BC?style=for-the-badge&logo=terraform)
 ![Cloud](https://img.shields.io/badge/Cloud-AWS-232F3E?style=for-the-badge&logo=amazonaws)
@@ -20,7 +20,8 @@ This project combines the power of AWS Lambda, API Gateway, S3, and Amplify to d
 
 This diagram summarizes the full AWS-powered architecture, built and deployed using Terraform:
 
-![Architecture Diagram](screenshots/text-to-speech-Diagram.png)
+![Architecture Diagram](<img width="761" height="561" alt="Asconababy-Text-To-Speech-App Architecture drawio (1)" src="https://github.com/user-attachments/assets/5418c076-f5d0-4c8c-b860-17c57aa33336" />
+)
 
 ---
 
@@ -37,22 +38,28 @@ This diagram summarizes the full AWS-powered architecture, built and deployed us
 ## Screenshots
 
 **Frontend UI – Welcome Screen**  
-![Welcome UI](screenshots/Text-To-Speech-Welcome.png)
+![Welcome UI](<img width="1366" height="768" alt="Screenshot (169)" src="https://github.com/user-attachments/assets/aaee67e8-c16f-4064-8071-59685b5bb3bb" />
+)
 
 **Frontend UI – Demo in Action**  
-![In-Use UI](screenshots/Text-To-Speech-InUse.png)
+![In-Use UI](<img width="1366" height="768" alt="Screenshot (167)" src="https://github.com/user-attachments/assets/8f218475-238d-4e9e-a0f8-ca29b985e94c" />
+)
 
 **API Gateway – POST /convert route setup**  
-![API Gateway](screenshots/api-gateway.png)
+![API Gateway](<img width="1366" height="768" alt="Screenshot (171)" src="https://github.com/user-attachments/assets/7ea26ad8-3886-4240-b688-3db1373dd700" />
+)
 
 **Amplify – Deployment screen**  
-![AWS Amplify](screenshots/aws-amplify.png)
+![AWS Amplify](<img width="1366" height="768" alt="Screenshot (168)" src="https://github.com/user-attachments/assets/7a042d0d-f03e-4745-a1be-81384d530b24" />
+)
 
 **CloudWatch – Lambda logs and execution time**  
-![CloudWatch Log](screenshots/cloudwatch-log.png)
+![CloudWatch Log](<img width="1366" height="768" alt="Screenshot (174)" src="https://github.com/user-attachments/assets/94917a64-6de1-426a-bc1b-cabb60ab757f" />
+)
 
 **Terraform – Output after successful apply**  
-![Terraform Apply Output](screenshots/Terraform-Apply-1.png)
+![Terraform Apply Output](<img width="1366" height="768" alt="Screenshot (176)" src="https://github.com/user-attachments/assets/62081d63-1039-47d8-b1bb-fa8e82ff4512" />
+)
 
 **Terraform – Execution plan with resource changes**  
 ![Terraform Plan](screenshots/Terraform-Apply-2.png)
@@ -129,7 +136,7 @@ terraform apply
 ---
 
 
-## 🧠 What I Learned
+##  What I Learned
 
 This project helped me deepen my understanding of:
 
@@ -141,4 +148,5 @@ This project helped me deepen my understanding of:
 - Structuring a full-stack project for future reuse and scaling
 
 It also pushed me to improve how I document and present my work for technical audiences.
+
 
