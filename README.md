@@ -1,0 +1,144 @@
+# Terraform Text-to-Speech App
+
+![IaC](https://img.shields.io/badge/IaC-Terraform-7B42BC?style=for-the-badge&logo=terraform)
+![Cloud](https://img.shields.io/badge/Cloud-AWS-232F3E?style=for-the-badge&logo=amazonaws)
+![Text-to-Speech](https://img.shields.io/badge/Text--to--Speech-API-4B5563?style=for-the-badge)
+![Amazon Polly](https://img.shields.io/badge/Amazon%20Polly-TTS-F9A03C?style=for-the-badge&logo=amazon)
+![AWS Lambda](https://img.shields.io/badge/AWS%20Lambda-Serverless-F58536?style=for-the-badge&logo=awslambda)
+![API Gateway](https://img.shields.io/badge/API%20Gateway-Rest%20API-6B7280?style=for-the-badge&logo=amazonaws)
+![Amplify](https://img.shields.io/badge/AWS%20Amplify-Frontend-F59E0B?style=for-the-badge&logo=awsamplify)
+
+
+A serverless, infrastructure-as-code application that converts text to speech using Amazon Polly, deployed entirely with Terraform.
+
+This project combines the power of AWS Lambda, API Gateway, S3, and Amplify to deliver a modern, full-stack solution — all without manually touching the AWS Console.
+
+---
+
+
+## Architecture
+
+This diagram summarizes the full AWS-powered architecture, built and deployed using Terraform:
+
+![Architecture Diagram](screenshots/text-to-speech-Diagram.png)
+
+---
+
+## Features
+
+- Converts user input text into `.mp3` audio using Amazon Polly
+- Uploads audio to S3 and returns a presigned URL
+- Fully managed through reusable Terraform modules
+- Frontend hosted with Amplify (static HTML/CSS/JS)
+- CORS-safe and ready for production integrations
+
+---
+
+## Screenshots
+
+**Frontend UI – Welcome Screen**  
+![Welcome UI](screenshots/Text-To-Speech-Welcome.png)
+
+**Frontend UI – Demo in Action**  
+![In-Use UI](screenshots/Text-To-Speech-InUse.png)
+
+**API Gateway – POST /convert route setup**  
+![API Gateway](screenshots/api-gateway.png)
+
+**Amplify – Deployment screen**  
+![AWS Amplify](screenshots/aws-amplify.png)
+
+**CloudWatch – Lambda logs and execution time**  
+![CloudWatch Log](screenshots/cloudwatch-log.png)
+
+**Terraform – Output after successful apply**  
+![Terraform Apply Output](screenshots/Terraform-Apply-1.png)
+
+**Terraform – Execution plan with resource changes**  
+![Terraform Plan](screenshots/Terraform-Apply-2.png)
+
+---
+
+## Tech Stack
+
+- **Terraform (modular structure)**
+- **AWS Lambda (Python 3.12)**
+- **Amazon Polly (Text-to-Speech)**
+- **Amazon S3 (audio file storage)**
+- **API Gateway (HTTP API v2)**
+- **AWS Amplify (Frontend hosting)**
+- **IAM (custom roles/policies)**
+- **CloudWatch (log monitoring)**
+
+---
+
+## Folder Structure
+
+```text
+/terraform-text-to-speech-app/
+├── main.tf
+├── outputs.tf
+├── terraform.lock.hcl
+├── modules/
+│   ├── amplify/
+│   ├── api_gateway/
+│   ├── lambda/
+│   ├── iam/
+│   └── s3/
+├── lambda/
+│   └── polly_handler.py
+├── frontend/
+│   └── index.html
+├── .gitignore
+├── README.md
+└── screenshots/
+    ├── Text-To-Speech-Welcome.png
+    ├── Text-To-Speech-InUse.png
+    ├── API Gateway.png
+    ├── AWS Amplify.png
+    ├── CloudWatch Log.png
+    ├── Terraform-Apply-1.png
+    ├── Terraform-Apply-2.png
+    └── text-to-speech-Diagram.png
+```
+
+
+
+### Steps
+
+```bash
+# Clone this repo
+git clone https://github.com/YOUR_USERNAME/terraform-text-to-speech-app.git
+cd terraform-text-to-speech-app
+
+# Zip your Lambda function
+cd lambda
+zip function.zip polly_handler.py -r
+cd ..
+
+# Deploy infrastructure
+terraform init
+terraform apply
+```
+
+### Manual Step (Frontend)
+- Go to the Amplify Console
+- Open the main branch
+- Click "Manual deploy" and upload frontend.zip from the frontend/ folder
+
+---
+
+
+## 🧠 What I Learned
+
+This project helped me deepen my understanding of:
+
+- Writing clean, modular **Terraform code**
+- Connecting multiple **AWS services** without using the AWS Console
+- Deploying real apps with **Infrastructure as Code (IaC)**
+- Handling **CORS** and integrating **API Gateway with Lambda**
+- Monitoring and debugging with **CloudWatch logs**
+- Structuring a full-stack project for future reuse and scaling
+
+It also pushed me to improve how I document and present my work for technical audiences.
+
